@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
-const port = 2121;
+const PORT = process.env.PORT || 2121;
 require("dotenv").config();
 
 app.use(cors());
@@ -76,6 +76,6 @@ app.put("/put/:id", (req, res) => {
   );
 });
 
-app.listen(port, function () {
+app.listen(PORT, function () {
   console.log("Express is running");
 });
