@@ -1,0 +1,38 @@
+footer {
+  height: 131px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+  background: #17a2b8;
+  /* margin-top: 10%; */
+  /* margin-top: calc(100vh); */
+  /* margin-top: auto; */
+  /* position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0; */
+}
+
+a {
+  color: #ffc107;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.social-media-container {
+  margin-top: 1rem;
+}
+
+.fa-icon {
+  font-size: 2rem;
+  margin: 1rem;
+  color: black;
+  width: 2rem;
+}
+
+.design {
+  margin-bottom: 2rem;
+}
