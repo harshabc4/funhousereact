@@ -6,6 +6,10 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    document.title = "Finish Line";
+  }, []);
+
   const [didItChange, setDidItChange] = useState(false);
   const [item, setItem] = useState({
     title: "",
