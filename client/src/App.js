@@ -34,14 +34,16 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resp = await axios.get("/showMaterials").then((res) => {
-          if (res.ok) {
-            return res.json();
-          }
-        });
-        // .then((jsonRes) => setItems(jsonRes));
-        await resp.json.then((jsonRes) => setItems(jsonRes));
+        const resp = fetch("/showMaterials")
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            }
+          })
+          .then((jsonRes) => setItems(jsonRes));
+        // await resp.json.then((jsonRes) => setItems(jsonRes));
         // console.log(data);
+        // console.log(resp);
       } catch (err) {
         console.error(err);
       }
@@ -158,29 +160,20 @@ function App() {
     console.log(updatedItem);
   }
 
-  const projectTiles = items.map((item) => {
-    return (
-      <div key={item._id} className="project-tile">
-        <h1>{item.title}</h1>
-        <p>{item.description}</p>
-        <div className="button-container">
-          <button
-            className="update-button"
-            onClick={() => openUpdate(item._id)}
-          >
-            UPDATE
-          </button>
-          <button
-            className="delete-button"
-            onClick={() => deleteItem(item._id)}
-          >
-            DELETE
-          </button>
-        </div>
+  const projectTiles = items.map((item) => (
+    <div key={item._id} className="project-tile">
+      <h1>{item.title}</h1>
+      <p>{item.description}</p>
+      <div className="button-container">
+        <button className="update-button" onClick={() => openUpdate(item._id)}>
+          UPDATE
+        </button>
+        <button className="delete-button" onClick={() => deleteItem(item._id)}>
+          DELETE
+        </button>
       </div>
-    );
-    //
-  });
+    </div>
+  ));
 
   return (
     <div className="App">
