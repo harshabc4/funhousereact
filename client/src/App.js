@@ -34,14 +34,14 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetch("/showMaterials")
-          .then((res) => {
-            if (res.ok) {
-              return res.json();
-            }
-          })
-          .then((jsonRes) => setItems(jsonRes));
-        console.log(data);
+        const resp = await axios.get("/showMaterials").then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+        });
+        // .then((jsonRes) => setItems(jsonRes));
+        await resp.json.then((jsonRes) => setItems(jsonRes));
+        // console.log(data);
       } catch (err) {
         console.error(err);
       }
@@ -79,13 +79,14 @@ function App() {
     try {
       const resp = await axios
         .post("/addMaterial/", newItem)
-        .then(setDidItChange(!didItChange))
+        // .then(setDidItChange(!didItChange))
         .then(
           setItem({
             title: "",
             description: "",
           })
         );
+      await resp.json.then(setDidItChange(!didItChange));
       console.log(newItem);
       console.log(resp.data);
     } catch (err) {
@@ -113,9 +114,9 @@ function App() {
 
   const deleteItem = async (id) => {
     try {
-      const resp = await axios
-        .delete("/delete/" + id)
-        .then(setDidItChange(!didItChange));
+      const resp = await axios.delete("/delete/" + id);
+      // .then(setDidItChange(!didItChange));
+      await resp.json.then(setDidItChange(!didItChange));
       console.log(resp.data);
     } catch (err) {
       console.error(err);
@@ -175,12 +176,6 @@ function App() {
               value={item.description}
               placeholder="description"
             ></input>
-            {/* <input
-              onChange={handleChange}
-              name="due"
-              value={item.dueDate}
-              placeholder="due date"
-            ></input> */}
             <button onClick={addItem}>ADD ITEM</button>
           </div>
         ) : (
