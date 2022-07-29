@@ -158,6 +158,30 @@ function App() {
     console.log(updatedItem);
   }
 
+  const projectTiles = items.map((item) => {
+    return (
+      <div key={item._id} className="project-tile">
+        <h1>{item.title}</h1>
+        <p>{item.description}</p>
+        <div className="button-container">
+          <button
+            className="update-button"
+            onClick={() => openUpdate(item._id)}
+          >
+            UPDATE
+          </button>
+          <button
+            className="delete-button"
+            onClick={() => deleteItem(item._id)}
+          >
+            DELETE
+          </button>
+        </div>
+      </div>
+    );
+    //
+  });
+
   return (
     <div className="App">
       <div className="all-content-minus-footer">
@@ -197,31 +221,7 @@ function App() {
             </button>
           </div>
         )}
-        <div className="project-container">
-          {items.map((item) => {
-            return (
-              <div key={item._id} className="project-tile">
-                <h1>{item.title}</h1>
-                <p>{item.description}</p>
-                <div className="button-container">
-                  <button
-                    className="update-button"
-                    onClick={() => openUpdate(item._id)}
-                  >
-                    UPDATE
-                  </button>
-                  <button
-                    className="delete-button"
-                    onClick={() => deleteItem(item._id)}
-                  >
-                    DELETE
-                  </button>
-                </div>
-              </div>
-            );
-            //
-          })}
-        </div>
+        <div className="project-container">{projectTiles}</div>
       </div>
       <Footer />
     </div>
