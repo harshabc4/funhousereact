@@ -31,19 +31,35 @@ function App() {
     id: "",
   });
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios
+          .get("/showMaterials")
+
+          .then((res) => {
+            console.log(res.data);
+            return res.data;
+          })
+          .then((res) => setItems(res));
+        // setItems(await response);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, [didItChange]);
+
   // useEffect(() => {
   //   const fetchData = async () => {
   //     try {
-  //       const resp = fetch("/showMaterials")
+  //       const response = await fetch("/showMaterials")
   //         .then((res) => {
   //           if (res.ok) {
   //             return res.json();
   //           }
   //         })
   //         .then((jsonRes) => setItems(jsonRes));
-  //       // await resp.json.then((jsonRes) => setItems(jsonRes));
-  //       // console.log(data);
-  //       // console.log(resp);
   //     } catch (err) {
   //       console.error(err);
   //     }
@@ -51,16 +67,16 @@ function App() {
   //   fetchData();
   // }, [didItChange]);
 
-  useEffect(() => {
-    fetch("/showMaterials")
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-      })
-      .then((jsonRes) => setItems(jsonRes))
-      .catch((err) => console.log(err));
-  }, [didItChange]);
+  // useEffect(() => {
+  //   fetch("/showMaterials")
+  //     .then((res) => {
+  //       if (res.ok) {
+  //         return res.json();
+  //       }
+  //     })
+  //     .then((jsonRes) => setItems(jsonRes))
+  //     .catch((err) => console.log(err));
+  // }, [didItChange]);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -72,65 +88,65 @@ function App() {
     });
   }
 
-  // const addItem = async (event) => {
-  //   event.preventDefault();
-  //   const newItem = {
-  //     title: item.title,
-  //     description: item.description,
-  //   };
-  //   try {
-  //     const resp = await axios
-  //       .post("/addMaterial/", newItem)
-  //       // .then(setDidItChange(!didItChange))
-  //       .then(
-  //         setItem({
-  //           title: "",
-  //           description: "",
-  //         })
-  //       );
-  //     await resp.json.then(setDidItChange(!didItChange));
-  //     console.log(newItem);
-  //     console.log(resp.data);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
-
-  function addItem(event) {
+  const addItem = async (event) => {
     event.preventDefault();
     const newItem = {
       title: item.title,
       description: item.description,
     };
-    // axios.post("/addMaterial", newItem);
-    axios.post("/addMaterial", newItem).then(setDidItChange(!didItChange));
-    console.log(newItem);
-    // alert("item added");
+    try {
+      const resp = await axios
+        .post("/addMaterial/", newItem)
+        // .then(setDidItChange(!didItChange))
+        .then(
+          setItem({
+            title: "",
+            description: "",
+          })
+        )
+        .then(setDidItChange(!didItChange));
+      console.log(newItem);
+      console.log(resp.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-    setItem({
-      title: "",
-      description: "",
-    });
-    // setDidItChange(!didItChange);
-  }
+  // function addItem(event) {
+  //   event.preventDefault();
+  //   const newItem = {
+  //     title: item.title,
+  //     description: item.description,
+  //   };
+  //   // axios.post("/addMaterial", newItem);
+  //   axios.post("/addMaterial", newItem).then(setDidItChange(!didItChange));
+  //   console.log(newItem);
+  //   // alert("item added");
 
-  // const deleteItem = async (id) => {
-  //   try {
-  //     const resp = await axios.delete("/delete/" + id);
-  //     // .then(setDidItChange(!didItChange));
-  //     await resp.json.then(setDidItChange(!didItChange));
-  //     console.log(resp.data);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
+  //   setItem({
+  //     title: "",
+  //     description: "",
+  //   });
+  //   // setDidItChange(!didItChange);
+  // }
 
-  function deleteItem(id) {
-    axios.delete("/delete/" + id).then(setDidItChange(!didItChange));
-    // alert("item deleted");
-    console.log(`Deleted item with id ${id}`);
-    // setDidItChange(!didItChange);
-  }
+  const deleteItem = async (id) => {
+    try {
+      const resp = await axios
+        .delete("/delete/" + id)
+        .then(setDidItChange(!didItChange));
+      console.log(resp.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // function deleteItem(id) {
+  //   axios.delete("/delete/" + id).then(setDidItChange(!didItChange));
+  //   // alert("item deleted");
+  //   console.log(`Deleted item with id ${id}`);
+  //   // setDidItChange(!didItChange);
+  // }
 
   function openUpdate(id) {
     setIsPut(true);
