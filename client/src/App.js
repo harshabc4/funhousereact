@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ProjectTiles from "./components/ProjectTiles";
 
 function App() {
   useEffect(() => {
@@ -177,18 +178,13 @@ function App() {
   }
 
   const projectTiles = items.map((item) => (
-    <div key={item._id} className="project-tile">
-      <h1>{item.title}</h1>
-      <p>{item.description}</p>
-      <div className="button-container">
-        <button className="update-button" onClick={() => openUpdate(item._id)}>
-          UPDATE
-        </button>
-        <button className="delete-button" onClick={() => deleteItem(item._id)}>
-          DELETE
-        </button>
-      </div>
-    </div>
+    <ProjectTiles
+      key={item._id}
+      title={item.title}
+      description={item.description}
+      handleClick={() => openUpdate(item._id)}
+      handleDeleteClick={() => deleteItem(item._id)}
+    />
   ));
 
   return (
@@ -196,7 +192,7 @@ function App() {
       <div className="all-content-minus-footer">
         <Navbar />
         {!isPut ? (
-          <div className="main">
+          <div className="main default">
             <input
               onChange={handleChange}
               name="title"
@@ -212,7 +208,7 @@ function App() {
             <button onClick={addItem}>ADD ITEM</button>
           </div>
         ) : (
-          <div className="main">
+          <div className="main update-display">
             <input
               onChange={handleUpdate}
               name="title"
