@@ -91,4 +91,5 @@ app.get("*", function (request, response) {
 
 app.listen(PORT, function () {
   console.log("Express is running");
+  console.log(PORT);
 });

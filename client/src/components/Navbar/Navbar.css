@@ -1,0 +1,113 @@
+.navbar {
+  background-color: #77c6cc;
+}
+
+body .navbar a {
+  color: pink;
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+.ease-in {
+  -webkit-animation: ease-in-out 1s;
+  -moz-animation: ease-in-out 1s;
+   -ms-animation: ease-in-out 1s;
+    -o-animation: ease-in-out 1s; 
+       animation: ease-in-out 1s;
+}
+
+
+.fade-in {
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+   -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+       animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+
+.menu-btn {
+  /* float: left; */
+  padding-top: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  /* border: 3px solid white; */
+}
+
+.menu-btn_burger {
+  margin: 17.5px -10px 10px 10px;
+  width: 50px;
+  height: 3px;
+  background: #1d1e19;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 5px red; */
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: #1d1e19;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 5px red; */
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn_burger::after {
+  transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn_burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after {
+  transform: rotate(-45deg) translate(35px, 35px)
+}

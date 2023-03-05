@@ -8,8 +8,8 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
-    <footer>
-      <section className="social-media-container">
+    <footer className="footer w-100 sticky-footer">
+      <section className="d-flex justify-content-center">
         <a href="mailto:harshabc4@gmail.com" role="button">
           <FontAwesomeIcon className="fa-icon" icon={faEnvelope} />
         </a>
@@ -26,7 +26,7 @@ export default function Footer() {
         </a>
       </section>
 
-      <div className="copyright-container">
+      <div className="d-flex justify-content-center">
         <div className="design">
           Design by: <a href="https://brianharsha.netlify.app/">Brian Harsha</a>
         </div>

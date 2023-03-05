@@ -1,17 +1,15 @@
 footer {
-  height: 131px;
+  /* height: 131px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1rem;
-  background: #17a2b8;
-  /* margin-top: 10%; */
-  /* margin-top: calc(100vh); */
-  /* margin-top: auto; */
-  /* position: absolute;
-  left: 0;
+  font-size: 1rem; */
+  background: #77c6cc;
+}
+
+.sticky-footer {
+  position: absolute;
   bottom: 0;
-  right: 0; */
 }
 
 a {
