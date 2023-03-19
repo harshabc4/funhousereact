@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #77c6cc;
+}
+
+body .navbar a {
+  color: #1d1e19;
+}
+
+body * {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  line-height: 1.5em;
+  /* color: red; */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(../../assets/fonts/Roboto/Roboto-Black.ttf)
+}

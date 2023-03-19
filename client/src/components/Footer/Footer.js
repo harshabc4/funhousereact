@@ -8,7 +8,7 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
-    <footer className="footer w-100 sticky-footer">
+    <footer className="footer w-100">
       <section className="d-flex justify-content-center">
         <a href="mailto:harshabc4@gmail.com" role="button">
           <FontAwesomeIcon className="fa-icon" icon={faEnvelope} />

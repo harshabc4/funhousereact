@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Navbar from "./components/Navbar/Navbar";
+import Navmenu from "./components/Navmenu/Navmenu";
 import Footer from "./components/Footer/Footer";
 import ProjectTiles from "./components/ProjectTiles/ProjectTiles";
 import { Routes, Route } from 'react-router-dom';
@@ -11,7 +11,7 @@ import Booking from "./pages/Booking/Booking";
 
 function App() {
   useEffect(() => {
-    document.title = "Finish Line";
+    document.title = "The Funhouse";
   }, []);
 
   return (
