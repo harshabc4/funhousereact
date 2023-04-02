@@ -76,6 +76,13 @@ app.put("/put/:id", (req, res) => {
   );
 });
 
+// // get insta stuff
+// app.get(`https://graph.instagram.com/v16.0/17841400385468108/media?fields=id,media_type,media_url,caption&limit=${props.limit}&access_token=${token}`, (req, res) => {
+//   Item.find()
+//     .then((items) => res.json(items))
+//     .catch((err) => res.status(400).json("Error: " + err));
+// })
+
 // // TEST START
 // // Accessing the path module
 const path = require("path");

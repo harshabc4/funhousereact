@@ -1,4 +1,12 @@
 body {
   background-color: #1d1e19;
+  /* background-color: pink; */
   color: #fbf8cf;
+}
+
+.page-wrapper {
+  min-height: calc(100% - 400px);
+  /* min-height: 400px; */
+  /* margin-bottom: 10rem; */
+  padding-bottom: 7rem;
 }
