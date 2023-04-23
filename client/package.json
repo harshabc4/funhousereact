@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
   },
   "scripts": {
     "start": "react-scripts start --node-flags --max-old-space-size=2048 --no-warnings",
@@ -44,6 +44,13 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ],
+    "options": {
+      "allowedHosts": [
+        "localhost",
+        ".localhost",
+        "https://funhousereact-production.up.railway.app/"
+      ]
+    }
   }
 }
