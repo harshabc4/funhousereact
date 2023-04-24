@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start --node-flags --max-old-space-size=2048 --no-warnings",
-    "build": "react-scripts build webpack --mode production",
+    "build": "react-scripts build webpack --mode=production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
