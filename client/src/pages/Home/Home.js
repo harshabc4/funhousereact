@@ -13,6 +13,7 @@ export default function Home() {
                 <Navmenu />
                 <Logo />
                 <Youtube />
+                <div>and here is a test</div>
                 <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
                 <small>You are trying to get {process.env.REACT_APP_INS_TOKEN}</small>
                 <SocialMedia token={process.env.REACT_APP_INS_TOKEN} limit={12} />
