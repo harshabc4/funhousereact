@@ -1,0 +1,20 @@
+.feed-item {
+    width: 60%;
+    max-width: 400px;
+}
+
+.modal-dialog {
+    max-width: 100vw;
+}
+
+.modal-content {
+    overflow: scroll;
+}
+
+.modal-body {
+    margin: auto;
+}
+
+.modal-image {
+    margin: auto;
+}

@@ -6,6 +6,11 @@ div {
 img {
   /* max-height: 400px; */
   /* min-height: 10%; */
+  /* width: 60%;
+  max-width: 400px; */
+}
+
+#main-logo {
   width: 60%;
   max-width: 400px;
 }

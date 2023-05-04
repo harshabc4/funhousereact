@@ -14,6 +14,25 @@ function App() {
     document.title = "The Funhouse";
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios
+          .get("/showMaterials")
+
+          .then((res) => {
+            console.log(res.data);
+            console.log("this is materials from appjs frontend");
+            return res.data;
+          });
+        // setItems(await response);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
       <Routes>

@@ -5,7 +5,8 @@ import LogoImage from '../../assets/logo.jpg'
 export default function Logo() {
   return (
     <div className="d-flex">
-      <img src={LogoImage}></img>
+      <img src={LogoImage}
+        id="main-logo"></img>
     </div>
   );
 }
