@@ -156,7 +156,9 @@ const Feed = (props) => {
 
     return (
         <React.Fragment>
+            {/* <div> */}
             {post}
+            {/* </div> */}
         </React.Fragment>
     );
 }

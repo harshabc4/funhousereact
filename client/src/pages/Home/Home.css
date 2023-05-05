@@ -10,3 +10,34 @@ body {
   /* margin-bottom: 10rem; */
   padding-bottom: 7rem;
 }
+
+/* .react-parallax-bgimage {
+  max-height: 40%;
+} */
+
+.second-parallax img {
+  max-height: 80%;
+}
+
+.home .hero-wrapper {
+  /* background-color: #1d1e19; */
+  color: #1d1e19;
+  background-color: #77c6cc;
+  /* background-color: rgb(29, 30, 25, 0.5) !important; */
+  /* opacity: .5; */
+  /* background: linear-gradient(#1d1e19, #7d5b35); */
+  /* background: linear-gradient(#1d1e19, #77c6cc); */
+  /* background: linear-gradient(#1d1e19, #00FFFFFF); */
+}
+
+.studio-pics {
+  max-width: 30%;
+  border-radius: 1rem;
+}
+
+.studio-pics-wrapper {
+  margin: auto;
+  max-width: 80%;
+  /* display: flex; */
+  background-color: rgb(29, 30, 25, 0.1);
+}

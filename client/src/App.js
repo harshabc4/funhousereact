@@ -8,6 +8,7 @@ import ProjectTiles from "./components/ProjectTiles/ProjectTiles";
 import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import Booking from "./pages/Booking/Booking";
+// import { Parallax, ParallaxLayer } from 'react-parallax';
 
 function App() {
   useEffect(() => {
@@ -34,12 +35,20 @@ function App() {
   }, []);
 
   return (
+    // <Parallax
+    //   blur={{ min: -15, max: 15 }}
+    //   bgImage={require('./assets/studiopic.jpg')}
+    //   bgImageAlt="the dog"
+    //   strength={800}
+    // >
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
       </Routes>
     </div>
+    // </Parallax>
+
   );
 }
 
