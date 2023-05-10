@@ -20,17 +20,22 @@ export default function Hero(props) {
 
 
     return (
-        <div>
+        <div className="hero-main-wrapper">
             <div className="hero-wrapper">
                 <h1 className="text-center">Home to Richmond's Creatives</h1>
                 <div>Owned and operated by musicians and creatives, The Funhouse is a private recording studio and rehearsal space in Richmond, Virginia.  Our hybrid analog and digital recording system allows us to push the boundaries of a classic studio - and amplify the artists.</div>
             </div>
-            <div className="studio-pics-wrapper">
-
+            {/* <div className="studio-pics-wrapper row"> */}
+            <div className="studio-pics-wrapper row">
+                {/* <div> */}
+                {/* <div className="studio-pics-individual-wrapper"> */}
                 <img className="studio-pics m-4" src={pic4}
                     alt="asdf" ></img>
+                {/* </div>
+                <div> */}
                 <img className="studio-pics m-4" src={pic2}
                     alt="asdf" ></img>
+                {/* </div> */}
                 <img className="studio-pics m-4" src={pic3}
                     alt="asdf" ></img>
 
@@ -52,6 +57,7 @@ export default function Hero(props) {
                 <img className="studio-pics m-4" src={pic8}
                     alt="asdf" ></img>
 
+                {/* </div> */}
             </div>
         </div>
     );

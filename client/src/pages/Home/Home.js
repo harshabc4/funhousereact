@@ -36,8 +36,13 @@ export default function Home() {
                     className="first-parallax"
                     blur={{ min: -15, max: 15 }}
                     bgImage={require('../../assets/studiopic.jpg')}
+                    bgImageSrcSet={`${require('../../assets/studiopicHalfSize2.jpg')} 1537w, ${require('../../assets/studiopicHalfSize1.jpg')} 3073w`}
+                    // bgImageSrcSet={`${require('../../assets/1.JPG')} 2048w, ${require('../../assets/studiopicHalfSize1.jpg')} 3073w`}
+                    // bgImageSrcSet="../../assets/studiopicHalfSize1.jpg, ../../assets/studiopicHalfSize1.jpg"
+                    bgImageSize="(max-width: 600px) 1573px, 3073px"
+                    // bgImageSize="(max-width: 1200px) 2048px, 3073px"
                     bgImageAlt="the dog"
-                    bgImageStyle={{ height: '50%', maxWidth: '50%', opacity: '1' }}
+                    bgImageStyle={{ height: '80%', maxWidth: '80%', opacity: '1' }}
                     strength={800}
                 >
                     {/* <div className="hero-wrapper">

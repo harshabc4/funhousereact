@@ -30,7 +30,7 @@ body {
   /* background: linear-gradient(#1d1e19, #00FFFFFF); */
 }
 
-.studio-pics {
+/* .studio-pics {
   max-width: 30%;
   border-radius: 1rem;
 }
@@ -38,6 +38,5 @@ body {
 .studio-pics-wrapper {
   margin: auto;
   max-width: 80%;
-  /* display: flex; */
   background-color: rgb(29, 30, 25, 0.1);
-}
+} */

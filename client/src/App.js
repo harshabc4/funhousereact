@@ -8,6 +8,7 @@ import ProjectTiles from "./components/ProjectTiles/ProjectTiles";
 import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import Booking from "./pages/Booking/Booking";
+import Creatives from "./pages/Creatives/Creatives";
 // import { Parallax, ParallaxLayer } from 'react-parallax';
 
 function App() {
@@ -44,7 +45,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<Booking />} />
+        {/* <Route path="/booking" element={<Booking />} /> */}
+        <Route path="/creatives" element={<Creatives />} />
       </Routes>
     </div>
     // </Parallax>

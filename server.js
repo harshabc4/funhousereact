@@ -85,11 +85,14 @@ async function refreshKeyAndAddToDb(oldToken) {
     });
 }
 
-cron.schedule('0 6 * * 6', () => {
+console.log(process.env.RAILWAY_ENVIRONMENT);
+if (process.env.RAILWAY_ENVIRONMENT == 'production') {
+  cron.schedule('0 6 * * 6', () => {
 
-  console.log('running a task saturday at 6am I hope');
-  getLastKeyAndRefresh();
-});
+    console.log('running a task saturday at 6am I hope');
+    getLastKeyAndRefresh();
+  });
+}
 
 
 
