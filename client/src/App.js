@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Navmenu from "./components/Navmenu/Navmenu";
 import Footer from "./components/Footer/Footer";
-import ProjectTiles from "./components/ProjectTiles/ProjectTiles";
 import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import Booking from "./pages/Booking/Booking";
