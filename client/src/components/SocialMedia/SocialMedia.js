@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios';
 import Feed from '../Feed/Feed';
+import "./SocialMedia.css";
 
 const SocialMedia = ({ token, ...props }) => {
    const [feeds, setFeedsData] = useState([])
@@ -30,7 +31,9 @@ const SocialMedia = ({ token, ...props }) => {
    }, []);
 
    return (
-      <div className="container">
+      // <div className="container">
+      // <div className="studio-pics-container">
+      <div className="social-media-pics-container row">
          {feeds.map((feed) => (
             <Feed key={feed.id} feed={feed} />
          ))}

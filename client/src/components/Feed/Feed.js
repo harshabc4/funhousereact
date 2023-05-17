@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Carousel } from 'react-bootstrap';
 import "./Feed.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -24,14 +25,53 @@ const Feed = (props) => {
     switch (media_type) {
         case "VIDEO":
             post = (
-                <video
-                    // width='100%'
-                    // height='auto'
-                    className='feed-item'
-                    src={media_url}
-                    type="video/mp4"
-                    controls playsinline>
-                </video>
+                // <>
+                <div className="feed-item-wrapper">
+                    <video
+                        // width='100%'
+                        // height='auto'
+                        className='feed-item m-4'
+                        src={media_url}
+                        onClick={handleShow}
+                        type="video/mp4"
+                    // controls playsinline
+                    // controls
+                    >
+                        <button className="btn btn-primary">
+                            <i className="bi bi-play"></i>
+                        </button>
+                    </video>
+                    {/* <button className="btn btn-primary position-absolute top-50 start-50 translate-middle"> */}
+
+
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Lightbox Title</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            {/* <img
+                                src={media_url}
+                                alt={caption}
+                                className='modal-image'
+                                onClick={handleClose}
+                            /> */}
+                            <video
+                                // width='100%'
+                                // height='auto'
+                                className='modal-image'
+                                src={media_url}
+                                type="video/mp4"
+                                controls playsinline>
+                            </video>
+                        </Modal.Body>
+                        {/* <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer> */}
+                    </Modal>
+                    {/* </> */}
+                </div>
             )
             break;
         case "CAROUSEL_ALBUM":
@@ -49,8 +89,8 @@ const Feed = (props) => {
             //     </Carousel.Item>
             // ))
             post = (
-                <>
-
+                // <>
+                <div className="feed-item-wrapper">
                     {/* {carouselItems.map((item) => (
                         <Carousel.Item>
                             <img
@@ -62,7 +102,7 @@ const Feed = (props) => {
                     <img
                         // width='100%'
                         // height='auto'
-                        className='feed-item'
+                        className='feed-item m-4'
                         id={id}
                         src={media_url}
                         alt={caption}
@@ -112,19 +152,23 @@ const Feed = (props) => {
                     </Modal>
 
 
-                </>
+                    {/* </> */}
+                </div>
             );
             break;
         default:
             post = (
-                <>
+                // <>
+                <div className="feed-item-wrapper">
+                    {/* <div className="studio-pics-wrapper row"> */}
                     <img
                         // width='100%'
                         // height='auto'
                         // height='20%'
                         id={id}
                         // id="feed-item"
-                        className='feed-item'
+                        // className='feed-item studio-pics'
+                        className='feed-item m-4'
                         src={media_url}
                         alt={caption}
                         onClick={handleShow}
@@ -148,7 +192,8 @@ const Feed = (props) => {
                     </Button>
                 </Modal.Footer> */}
                     </Modal>
-                </>
+                    {/* </> */}
+                </div>
 
             );
 

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import "./Hero.css";
 import { useEffect, useState } from "react";
 import HeroImages from "../../assets/HeroImages/HeroImages";
 import HeroImage from "../../components/HeroImage/HeroImage";
+// import React, { lazy } from 'react';
 
 export default function Hero(props) {
     // const [heroImages, setHeroImagesData] = useState([])
@@ -15,6 +16,9 @@ export default function Hero(props) {
     //     // Update the current index to load the next image
     //     setCurrentIndex((currentIndex) => currentIndex + 1);
     // };
+    const LoadingFallback = () => <div>Loading...</div>;
+
+    // const HeroImage = lazy(() => import('../../components/HeroImage/HeroImage'));
 
     return (
         <div className="hero-main-wrapper">
@@ -28,6 +32,13 @@ export default function Hero(props) {
                 ))} */}
                 {HeroImages.sort((a, b) => a.order - b.order).map((imageData, index) => (
                     <HeroImage key={index} src={imageData.src} alt={imageData.alt} />
+
+
+                    // <Suspense fallback={<LoadingFallback />}>
+                    //     <HeroImage key={index} src={imageData.src} alt={imageData.alt} />
+                    // </Suspense>
+
+
                 ))}
                 {/* {HeroImages.sort((a, b) => a.order - b.order).map((imageData, index) => (
                     <HeroImage key={index} src={imageData.src} alt={imageData.alt} style={{ display: index === currentIndex ? "block" : "none" }}

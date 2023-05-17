@@ -1,0 +1,15 @@
+/* .social-media-pics-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px !important;
+    display: block;
+} */
+
+/* div {
+    max-width: 400px !important;
+} */
+
+.social-media-pics-container {
+    max-width: 80%;
+    margin: auto;
+}
