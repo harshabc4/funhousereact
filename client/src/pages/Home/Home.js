@@ -36,6 +36,8 @@ export default function Home() {
                     bgImageStyle={{ height: '80%', maxWidth: '80%', opacity: '1' }}
                     strength={800}
                 >
+                    {/* <Navmenu />
+                    <Logo /> */}
                     <Hero onFinish={handleFirstComponentFinish} />
                 </Parallax>
                 <Parallax

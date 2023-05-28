@@ -1,0 +1,36 @@
+.creatives-header {
+    margin: 2rem 0;
+}
+
+.creatives h2 {
+    width: 50%;
+    margin: auto;
+}
+
+.creatives-without-footer {
+    padding-bottom: 4rem;
+}
+
+.creatives-content {
+    max-width: 80%;
+    margin: auto;
+}
+
+/* .creative-name {
+    width: 100%;
+} */
+
+a:hover {
+    color: #fbf8cf;
+}
+
+.creative-wrapper a:visited {
+    color: #77c6cc;
+}
+
+.creative-url {
+    /* display: inline-block;
+    max-width: 10%; */
+    word-break: break-all;
+    overflow-wrap: break-word;
+}

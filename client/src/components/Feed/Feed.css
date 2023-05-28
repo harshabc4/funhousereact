@@ -47,3 +47,21 @@ button {}
     /* margin-top: auto;
     margin-bottom: auto; */
 }
+
+.modal-title {
+    margin: 1rem;
+    max-width: 95%;
+}
+
+/* .modal-header>button {
+    position: relative;
+    top: -2.5rem;
+} */
+
+.modal-header button {
+    margin: 1rem;
+}
+
+.modal-header {
+    align-items: start;
+}

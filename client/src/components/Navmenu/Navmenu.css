@@ -17,3 +17,12 @@ body * {
   font-family: 'Roboto';
   src: local('Roboto'), url(../../assets/fonts/Roboto/Roboto-Black.ttf)
 }
+
+.active {
+  background-color: #fbf8cf;
+  border-radius: 2rem;
+}
+
+html body .navbar {
+  margin: 0rem;
+}

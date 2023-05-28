@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navmenu.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 
@@ -15,11 +15,14 @@ export default function Navmenu() {
         <Navbar.Collapse>
           <div className="" id="">
             <ul className="navbar-nav" id="navbarSupportedContent">
-              <Link className="nav-link" to="/">Home</Link>
-              <Link className="nav-link" to="/booking">Booking</Link>
-              <li><a className="nav-link" href="#">Testimonials</a></li>
+              <NavLink className="nav-link" to="/">Home</NavLink>
+              {/* <Link className="nav-link" to="/booking">Booking</Link> */}
+              <NavLink className="nav-link" to="/creatives">Creatives</NavLink>
+              <NavLink className="nav-link" to="/studio">Studio</NavLink>
+              <NavLink className="nav-link" to="/faq">FAQ</NavLink>
+              {/* <li><a className="nav-link" href="#">Testimonials</a></li>
               <li><a className="nav-link" href="/social">Social</a></li>
-              <li><a className="nav-link" href="/dbtesting">dbtesting</a></li>
+              <li><a className="nav-link" href="/dbtesting">dbtesting</a></li> */}
             </ul>
           </div>
         </Navbar.Collapse>

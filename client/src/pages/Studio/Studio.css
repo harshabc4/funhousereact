@@ -1,0 +1,10 @@
+.studio-data-wrapper {
+    max-width: 80%;
+    margin: auto;
+}
+
+.studio-category {
+    max-height: 15rem;
+    overflow: auto;
+    scrollbar-width: thin;
+}

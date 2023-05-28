@@ -8,6 +8,8 @@ import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import Booking from "./pages/Booking/Booking";
 import Creatives from "./pages/Creatives/Creatives";
+import Studio from "./pages/Studio/Studio";
+import Faq from "./pages/Faq/Faq";
 // import { Parallax, ParallaxLayer } from 'react-parallax';
 
 function App() {
@@ -46,6 +48,8 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/booking" element={<Booking />} /> */}
         <Route path="/creatives" element={<Creatives />} />
+        <Route path="/studio" element={<Studio />} />
+        <Route path="/faq" element={<Faq />} />
       </Routes>
     </div>
     // </Parallax>

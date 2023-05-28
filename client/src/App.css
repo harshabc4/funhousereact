@@ -6,3 +6,13 @@ html,
 body {
     height: 100%;
 }
+
+.navbar a {
+    /* max-width: 5rem; */
+    /* max-width: 20%; */
+    text-align: center;
+}
+
+.navbar-toggler {
+    margin: 1rem 0;
+}
