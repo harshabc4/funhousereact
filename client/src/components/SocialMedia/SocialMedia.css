@@ -12,4 +12,10 @@
 .social-media-pics-container {
     max-width: 80%;
     margin: auto;
+    background-color: rgb(29, 30, 25, 0.1);
+    padding: 2rem 0;
+}
+
+.social-media-pics-container>div {
+    padding: 1rem;
 }

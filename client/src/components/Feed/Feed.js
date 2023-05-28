@@ -26,11 +26,12 @@ const Feed = (props) => {
         case "VIDEO":
             post = (
                 // <>
-                <div className="feed-item-wrapper">
+                <div className="col-md-4">
+                    {/* <div className="feed-item-wrapper "> */}
                     <video
                         // width='100%'
                         // height='auto'
-                        className='feed-item m-4'
+                        className='feed-item'
                         src={media_url}
                         onClick={handleShow}
                         type="video/mp4"
@@ -90,7 +91,9 @@ const Feed = (props) => {
             // ))
             post = (
                 // <>
-                <div className="feed-item-wrapper">
+                <div className="col-md-4">
+                    {/* <div className="feed-item-wrapper "> */}
+                    {/* // <div className="studio-pics"> */}
                     {/* {carouselItems.map((item) => (
                         <Carousel.Item>
                             <img
@@ -102,7 +105,7 @@ const Feed = (props) => {
                     <img
                         // width='100%'
                         // height='auto'
-                        className='feed-item m-4'
+                        className='feed-item'
                         id={id}
                         src={media_url}
                         alt={caption}
@@ -159,7 +162,9 @@ const Feed = (props) => {
         default:
             post = (
                 // <>
-                <div className="feed-item-wrapper">
+                <div className="col-md-4">
+                    {/* <div className="feed-item-wrapper "> */}
+                    {/* <div className="studio-pics"> */}
                     {/* <div className="studio-pics-wrapper row"> */}
                     <img
                         // width='100%'
@@ -168,7 +173,7 @@ const Feed = (props) => {
                         id={id}
                         // id="feed-item"
                         // className='feed-item studio-pics'
-                        className='feed-item m-4'
+                        className='feed-item'
                         src={media_url}
                         alt={caption}
                         onClick={handleShow}

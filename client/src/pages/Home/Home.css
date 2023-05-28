@@ -15,9 +15,9 @@ body {
   max-height: 40%;
 } */
 
-.second-parallax img {
+/* .second-parallax img {
   max-height: 80%;
-}
+} */
 
 .home .hero-wrapper {
   /* background-color: #1d1e19; */
@@ -28,6 +28,22 @@ body {
   /* background: linear-gradient(#1d1e19, #7d5b35); */
   /* background: linear-gradient(#1d1e19, #77c6cc); */
   /* background: linear-gradient(#1d1e19, #00FFFFFF); */
+}
+
+.hero-wrapper h1 {
+  margin-bottom: 0rem;
+}
+
+.info-wrapper {
+  color: #1d1e19;
+  background-color: #77c6cc;
+}
+
+.info {
+  /* margin: 1rem 10rem; */
+  margin: 1rem 0rem;
+  max-width: 60%;
+  font-size: 1.25rem;
 }
 
 /* .studio-pics {

@@ -4,9 +4,9 @@ import LogoImage from '../../assets/logo.jpg'
 
 export default function Logo() {
   return (
-    <div className="d-flex">
+    <div className="d-flex logo-wrapper">
       <img src={LogoImage}
-        id="main-logo"></img>
+        id="main-logo" className="img-fluid"></img>
     </div>
   );
 }

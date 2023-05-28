@@ -11,6 +11,10 @@ img {
 }
 
 #main-logo {
-  width: 60%;
+  /* width: 60%; */
   max-width: 400px;
+}
+
+.logo-wrapper {
+  overflow: auto;
 }
