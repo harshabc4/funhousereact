@@ -159,7 +159,7 @@ async function fetchInstagramPost() {
   try {
     const lastKey = await getLastKey();
     const resp = await axios
-      .get(`https://graph.instagram.com/v16.0/17841400385468108/media?fields=id,media_type,media_url,caption,children{media_url,thumbnail_url}&limit=${limit}&access_token=${lastKey.value}`);
+      .get(`https://graph.instagram.com/v16.0/6272560756164905/media?fields=id,media_type,media_url,caption,children{media_url,thumbnail_url}&limit=${limit}&access_token=${lastKey.value}`);
     console.log(resp.data);
     return resp.data;
 
