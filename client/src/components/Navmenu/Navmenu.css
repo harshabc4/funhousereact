@@ -7,15 +7,21 @@ body .navbar a {
 }
 
 body * {
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Turnpike', sans-serif;
   font-weight: bold;
   line-height: 1.5em;
   /* color: red; */
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Roboto';
   src: local('Roboto'), url(../../assets/fonts/Roboto/Roboto-Black.ttf)
+} */
+
+@font-face {
+  font-family: 'Turnpike';
+  src: local('Turnpike'), url(../../assets/fonts/Turnpike.ttf)
 }
 
 .active {
@@ -29,5 +35,5 @@ html body .navbar {
 
 .nav-link {
   /* margin: 0 1rem; */
-  min-width: 6rem;
+  min-width: 10rem;
 }
