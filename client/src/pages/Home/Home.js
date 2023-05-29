@@ -23,7 +23,7 @@ export default function Home() {
             <div className="page-wrapper">
                 <Navmenu />
                 <Logo />
-                <Parallax
+                {/* <Parallax
                     className="first-parallax"
                     blur={{ min: -15, max: 12 }}
                     bgImage={require('../../assets/studiopic.jpg')}
@@ -35,12 +35,12 @@ export default function Home() {
                     bgImageAlt="music studio with guitars"
                     bgImageStyle={{ height: '80%', maxWidth: '80%', opacity: '1' }}
                     strength={800}
-                >
-                    {/* <Navmenu />
+                > */}
+                {/* <Navmenu />
                     <Logo /> */}
-                    <Hero onFinish={handleFirstComponentFinish} />
-                </Parallax>
-                <Parallax
+                <Hero onFinish={handleFirstComponentFinish} />
+                {/* </Parallax> */}
+                {/* <Parallax
                     className="second-parallax"
                     blur={{ min: -15, max: 15 }}
                     bgImageSrcSet={`${require('../../assets/studiopic2HalfSize2.jpg')} 1537w, ${require('../../assets/studiopic2HalfSize1.jpg')} 3073w`}
@@ -49,14 +49,14 @@ export default function Home() {
                     bgImageAlt="the dog"
                     bgImageStyle={{ height: '80%', maxWidth: '80%', opacity: '1' }}
                     strength={800}
-                >
-                    <div className="info-wrapper d-flex">
-                        <div className="info text-center">Owned and operated by musicians and creatives, The Funhouse is a private recording studio and rehearsal space in Richmond, Virginia.  Our hybrid analog and digital recording system allows us to push the boundaries of a classic studio - and amplify the artists.</div>
-                    </div>
-                    {/* <div>and here is a test</div>
+                > */}
+                <div className="info-wrapper d-flex">
+                    <div className="info text-center">Owned and operated by musicians and creatives, The Funhouse is a private recording studio and rehearsal space in Richmond, Virginia.  Our hybrid analog and digital recording system allows us to push the boundaries of a classic studio - and amplify the artists.</div>
+                </div>
+                {/* <div>and here is a test</div>
                     <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small> */}
-                    {isFirstComponentFinished && <SocialMedia />}
-                </Parallax>
+                {isFirstComponentFinished && <SocialMedia />}
+                {/* </Parallax> */}
             </div>
             <Footer />
         </div >

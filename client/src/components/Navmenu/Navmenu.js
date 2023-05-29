@@ -10,21 +10,20 @@ export default function Navmenu() {
   return (
     <Navbar expand="lg">
       <Container>
-        {/* <Navbar.Brand href="home">The FunHouse</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>
-          <div className="" id="">
-            <ul className="navbar-nav" id="navbarSupportedContent">
-              <NavLink className="nav-link" to="/">Home</NavLink>
-              {/* <Link className="nav-link" to="/booking">Booking</Link> */}
-              <NavLink className="nav-link" to="/creatives">Creatives</NavLink>
-              <NavLink className="nav-link" to="/studio">Studio</NavLink>
-              <NavLink className="nav-link" to="/faq">FAQ</NavLink>
-              {/* <li><a className="nav-link" href="#">Testimonials</a></li>
+          {/* <div className="" id=""> */}
+          <ul className="navbar-nav row" id="navbarSupportedContent">
+            <NavLink className="nav-link col-md-3" to="/">Home</NavLink>
+            {/* <Link className="nav-link" to="/booking">Booking</Link> */}
+            <NavLink className="nav-link col-md-3" to="/creatives">Creatives</NavLink>
+            <NavLink className="nav-link col-md-3" to="/studio">Studio</NavLink>
+            <NavLink className="nav-link col-md-3" to="/faq">FAQ</NavLink>
+            {/* <li><a className="nav-link" href="#">Testimonials</a></li>
               <li><a className="nav-link" href="/social">Social</a></li>
               <li><a className="nav-link" href="/dbtesting">dbtesting</a></li> */}
-            </ul>
-          </div>
+          </ul>
+          {/* </div> */}
         </Navbar.Collapse>
         {/* <div className="col-md-3 d-none"></div> */}
       </Container>

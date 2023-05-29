@@ -43,3 +43,50 @@ h1 {
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
+
+
+
+
+body .carousel-item {
+    /* margin: auto; */
+    background-color: rgb(29, 30, 25);
+    /* margin-left: auto !important; */
+
+}
+
+.carousel-inner {
+    justify-content: center;
+    align-items: center;
+    /* max-width: 40%; */
+    margin: auto;
+}
+
+.carousel-inner img {
+    display: flex;
+    margin: auto;
+    border-radius: 2rem;
+}
+
+/* .carousel {
+    min-height: 60vh;
+    max-height: 60vh;
+} */
+
+.carousel-image-wrapper {
+    height: 60vh;
+}
+
+.carousel-image {
+    width: auto;
+    height: 100%;
+}
+
+.carousel.slide {
+
+    /* max-width: 50%; */
+}
+
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+}
