@@ -11,7 +11,7 @@ export default function Studio() {
             <div className="creatives-without-footer">
                 <Navmenu />
                 <div className="studio-data-wrapper text-center row">
-                    <h1 className="h1">Studio</h1>
+                    <h1 className="h1 creatives-header">Studio</h1>
                     {Object.entries(StudioData).map(([category, items]) => (
                         <div key={category} className="col-lg-3 studio-category m-2">
                             <h2 className="h2 my-2">{category}</h2>

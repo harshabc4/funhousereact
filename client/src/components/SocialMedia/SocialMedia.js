@@ -2,12 +2,21 @@ import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios';
 import Feed from '../Feed/Feed';
 import "./SocialMedia.css";
+import { Modal, Carousel } from 'react-bootstrap';
 
 const SocialMedia = ({ token, ...props }) => {
    const [feeds, setFeedsData] = useState([])
    //use useRef to store the latest value of the prop without firing the effect
    // const tokenProp = useRef(token);
    // tokenProp.current = token;
+
+   const [index, setIndex] = useState(0);
+   const LoadingFallback = () => <div>Loading...</div>;
+
+
+   const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+   };
 
    useEffect(() => {
       const fetchData = async () => {
@@ -34,9 +43,16 @@ const SocialMedia = ({ token, ...props }) => {
       // <div className="container">
       // <div className="studio-pics-container">
       <div className="social-media-pics-container row">
-         {feeds.map((feed) => (
-            <Feed key={feed.id} feed={feed} />
-         ))}
+         <div className="carousel-wrapper">
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+               {feeds.map((feed) => (
+                  <Carousel.Item className='carousel-item'>
+                     <Feed key={feed.id} feed={feed} />
+                  </Carousel.Item>
+
+               ))}
+            </Carousel>
+         </div>
       </div>
    );
 }

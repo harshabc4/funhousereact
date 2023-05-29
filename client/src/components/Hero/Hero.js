@@ -7,19 +7,14 @@ import { Modal, Carousel } from 'react-bootstrap';
 // import React, { lazy } from 'react';
 
 export default function Hero(props) {
-    // const [heroImages, setHeroImagesData] = useState([])
-
-    // useEffect(() => {
-    //     props.onFinish();
-    // }, [props.onFinish]);
-    // const [currentIndex, setCurrentIndex] = useState(0);
-    // const handleLoad = () => {
-    //     // Update the current index to load the next image
-    //     setCurrentIndex((currentIndex) => currentIndex + 1);
-    // };
+    const [index, setIndex] = useState(0);
     const LoadingFallback = () => <div>Loading...</div>;
 
-    // const HeroImage = lazy(() => import('../../components/HeroImage/HeroImage'));
+    const HeroImage = lazy(() => import('../../components/HeroImage/HeroImage'));
+
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
 
     return (
         <div className="hero-main-wrapper">
@@ -31,16 +26,24 @@ export default function Hero(props) {
                 {/* {HeroImages.sort((a, b) => a.order - b.order).map((image, index) => (
                     <img key={index} className="studio-pics m-4" src={image.src} alt={image.alt} />
                 ))} */}
-                {HeroImages.sort((a, b) => a.order - b.order).map((imageData, index) => (
-                    <HeroImage key={index} src={imageData.src} alt={imageData.alt} small={imageData.small} medium={imageData.medium} large={imageData.large} />
+                {/* {HeroImages.sort((a, b) => a.order - b.order).map((imageData, index) => ( */}
+                <div className="carousel-wrapper">
+                    <Carousel activeIndex={index} onSelect={handleSelect}>
+                        {HeroImages.map((item) => (
+                            // <div className="my-carousel">
+                            <Carousel.Item className="carousel-item">
+                                <div className="carousel-image-wrapper">
+                                    <img className="carousel-image"
+                                        src={item.small}></img>
+                                </div>
+                            </Carousel.Item>
+                            // </div>
+                        ))}
+                    </Carousel>
 
 
-                    // <Suspense fallback={<LoadingFallback />}>
-                    //     <HeroImage key={index} src={imageData.src} alt={imageData.alt} />
-                    // </Suspense>
-
-
-                ))}
+                </div>
+                {/* ))} */}
                 {/* {HeroImages.sort((a, b) => a.order - b.order).map((imageData, index) => (
                     <HeroImage key={index} src={imageData.src} alt={imageData.alt} style={{ display: index === currentIndex ? "block" : "none" }}
                         onLoad={handleLoad} />
