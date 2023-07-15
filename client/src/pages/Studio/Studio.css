@@ -4,7 +4,11 @@
 }
 
 .studio-category {
-    max-height: 15rem;
+    /* max-height: 15rem; */
     overflow: auto;
     scrollbar-width: thin;
+}
+
+.recording-header {
+    color: red;
 }

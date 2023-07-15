@@ -6,18 +6,22 @@ import StudioData from "../../assets/StudioData";
 
 
 export default function Studio() {
+    const sortedCategories = Object.entries(StudioData)
+        .sort(([, a], [, b]) => a.Order - b.Order);
     return (
         <div className="creatives">
             <div className="creatives-without-footer">
                 <Navmenu />
                 <div className="studio-data-wrapper text-center row">
-                    <h1 className="h1 creatives-header">Studio</h1>
-                    {Object.entries(StudioData).map(([category, items]) => (
+                    <h1 className="h1 creatives-header recording-header">Recording Studio</h1>
+                    {sortedCategories.map(([category, items]) => (
                         <div key={category} className="col-lg-3 studio-category m-2">
                             <h2 className="h2 my-2">{category}</h2>
-                            {items.map((item, index) => (
-                                <p key={index}>{item}</p>
-                            ))}
+                            <ul>
+                                {items.Items.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
                         </div>
                     ))}
                 </div>

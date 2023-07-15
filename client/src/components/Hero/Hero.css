@@ -64,7 +64,7 @@ body .carousel-item {
 .carousel-inner img {
     display: flex;
     margin: auto;
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
 }
 
 /* .carousel {
@@ -74,11 +74,13 @@ body .carousel-item {
 
 .carousel-image-wrapper {
     height: 60vh;
+    margin-bottom: 5rem;
 }
 
 .carousel-image {
     width: auto;
     height: 100%;
+    max-width: 100%;
 }
 
 .carousel.slide {

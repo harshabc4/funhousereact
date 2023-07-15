@@ -43,15 +43,15 @@ const SocialMedia = ({ token, ...props }) => {
       // <div className="container">
       // <div className="studio-pics-container">
       <div className="social-media-pics-container row">
-         <div className="carousel-wrapper">
-            <Carousel activeIndex={index} onSelect={handleSelect}>
-               {feeds.map((feed) => (
-                  <Carousel.Item className='carousel-item'>
-                     <Feed key={feed.id} feed={feed} />
-                  </Carousel.Item>
+         <div className="carousel-wrapper row">
+            {/* <Carousel activeIndex={index} onSelect={handleSelect}> */}
+            {feeds.map((feed) => (
+               // <Carousel.Item className='carousel-item'>
+               <Feed key={feed.id} feed={feed} />
+               // </Carousel.Item>
 
-               ))}
-            </Carousel>
+            ))}
+            {/* </Carousel> */}
          </div>
       </div>
    );
