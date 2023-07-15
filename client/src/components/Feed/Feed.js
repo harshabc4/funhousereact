@@ -27,13 +27,13 @@ const Feed = (props) => {
             post = (
                 // <>
                 // <div className="col-md-4">
-                <div className="carousel-image-wrapper">
+                <div className="carousel-image-wrapper col-md-12 d-flex">
                     {/* <div className="feed-item-wrapper "> */}
                     <video
                         // width='100%'
                         // height='auto'
                         // className='feed-item'
-                        className="carousel-image"
+                        className="carousel-image m-auto"
                         src={media_url}
                         onClick={handleShow}
                         type="video/mp4"
@@ -55,10 +55,10 @@ const Feed = (props) => {
             carouselItems = children.data;
             console.log(carouselItems);
             post = (
-                <div className="carousel-image-wrapper">
+                <div className="carousel-image-wrapper col-md-12 d-flex">
 
                     <img
-                        className="carousel-image"
+                        className="carousel-image m-auto"
                         id={id}
                         src={media_url}
                         alt={caption}
@@ -70,13 +70,13 @@ const Feed = (props) => {
             post = (
                 // <>
                 // <div className="col-md-4">
-                <div className="carousel-image-wrapper">
+                <div className="carousel-image-wrapper col-md-12 d-flex">
 
                     <img
 
                         id={id}
 
-                        className="carousel-image"
+                        className="carousel-image m-auto"
                         src={media_url}
                         alt={caption}
                     />

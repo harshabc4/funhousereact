@@ -18,7 +18,7 @@ export default function Navmenu() {
             <NavLink className="nav-link col-md-3" to="/">Home</NavLink>
             {/* <Link className="nav-link" to="/booking">Booking</Link> */}
             <NavLink className="nav-link col-md-3" to="/creatives">Creatives</NavLink>
-            <NavLink className="nav-link col-md-3" to="/studio">Studio</NavLink>
+            <NavLink className="nav-link col-md-3" to="/studio">Recording Studio</NavLink>
             <NavLink className="nav-link col-md-3" to="/faq">FAQ</NavLink>
             {/* <li><a className="nav-link" href="#">Testimonials</a></li>
               <li><a className="nav-link" href="/social">Social</a></li>

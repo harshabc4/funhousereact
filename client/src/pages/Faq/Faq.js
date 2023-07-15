@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 
 export default function Faq() {
     return (
-        <div className="creatives">
+        <div className="creatives faq-container">
             <div className="creatives-without-footer text-center faq">
                 <Navmenu />
                 <h1>FAQ</h1>
