@@ -1,14 +1,36 @@
 .studio-data-wrapper {
     max-width: 80%;
     margin: auto;
+    font-size: 0.75rem;
+}
+
+.studio-data-wrapper h2 {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+    .studio-category {
+        max-height: 20rem;
+        /* overflow: auto;
+        scrollbar-width: thin; */
+        margin: 0rem 2rem;
+    }
 }
 
 .studio-category {
     /* max-height: 15rem; */
     overflow: auto;
     scrollbar-width: thin;
+
+    margin-bottom: 1rem;
 }
 
 .recording-header {
-    color: red;
+    /* color: red; */
+    color: #d43c27;
+}
+
+.studio-category h2+* {
+    margin-top: 0.75rem;
+    ;
 }

@@ -10,20 +10,22 @@ export default function Studio() {
         .sort(([, a], [, b]) => a.Order - b.Order);
     return (
         <div className="creatives">
-            <div className="creatives-without-footer">
+            <div className="creatives-without-footer mb-4">
                 <Navmenu />
                 <div className="studio-data-wrapper text-center row">
                     <h1 className="h1 creatives-header recording-header">Recording Studio</h1>
-                    {sortedCategories.map(([category, items]) => (
-                        <div key={category} className="col-lg-3 studio-category m-2">
-                            <h2 className="h2 my-2">{category}</h2>
-                            <ul>
-                                {items.Items.map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                    <div className="row">
+                        {sortedCategories.map(([category, items]) => (
+                            <div key={category} className="col-lg-3 studio-category">
+                                <h2 className="h2 my-2">{category}</h2>
+                                <ul className="mb-2">
+                                    {items.Items.sort().map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
                 </div>
                 {/* <h1 className="h1 text-center creatives-header">Studio</h1>
                 <div className="d-flex text-align-center creatives-content row">

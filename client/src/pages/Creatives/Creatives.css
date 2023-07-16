@@ -1,14 +1,20 @@
 .creatives-header {
-    margin: 2rem 0;
+    margin: 5rem 1rem 3rem !important;
 }
 
 .creatives h2 {
     /* width: 50%; */
-    margin: auto;
+    /* margin: auto; */
+    font-size: 1.5rem;
 }
 
 .creatives-without-footer {
     padding-bottom: 4rem;
+}
+
+.creatives-item-container {
+
+    margin-bottom: 2rem;
 }
 
 .creatives-content {
@@ -19,6 +25,27 @@
 /* .creative-name {
     width: 100%;
 } */
+
+.creatives-header {
+    /* color: red; */
+    color: #d43c27;
+}
+
+@media (min-width: 992px) {
+    .creatives-info {
+        margin-bottom: 4rem;
+    }
+
+}
+
+.creatives-info {
+    margin: 2rem 0rem;
+    min-width: 80%;
+}
+
+.creatives-item {
+    margin-top: 1rem;
+}
 
 a:hover {
     color: #fbf8cf;
@@ -33,4 +60,8 @@ a:hover {
     max-width: 10%; */
     word-break: break-all;
     overflow-wrap: break-word;
+}
+
+.creatives-content {
+    margin-top: 3rem;
 }

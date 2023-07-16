@@ -16,3 +16,14 @@ body {
 .navbar-toggler {
     margin: 1rem 0;
 }
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 1.5rem !important;
+
+    }
+}
+
+h1 {
+    font-size: 2rem !important;
+}

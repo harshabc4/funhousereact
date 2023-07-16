@@ -42,7 +42,7 @@ const SocialMedia = ({ token, ...props }) => {
    return (
       // <div className="container">
       // <div className="studio-pics-container">
-      <div className="social-media-pics-container row">
+      <div className="social-media-pics-container mt-3 row">
          <div className="carousel-wrapper row">
             {/* <Carousel activeIndex={index} onSelect={handleSelect}> */}
             {feeds.map((feed) => (

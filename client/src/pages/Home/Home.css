@@ -39,11 +39,21 @@ body {
   background-color: #77c6cc;
 }
 
+
 .info {
   /* margin: 1rem 10rem; */
-  margin: 1rem 0rem;
+  margin: 1.5rem 0rem;
   max-width: 60%;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
+}
+
+.info>div {
+  margin-bottom: 1rem;
+}
+
+
+.home h1 {
+  line-height: 1.5 !important;
 }
 
 /* .studio-pics {
@@ -59,4 +69,12 @@ body {
 
 .react-parallax img {
   cursor: pointer;
+}
+
+
+@media (min-width: 992px) {
+  .info {
+    font-size: 1rem;
+  }
+
 }

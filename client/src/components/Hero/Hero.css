@@ -72,8 +72,16 @@ body .carousel-item {
     max-height: 60vh;
 } */
 
+@media (min-width: 992px) {
+
+    .carousel-image-wrapper {
+        height: 60vh;
+
+    }
+
+}
+
 .carousel-image-wrapper {
-    height: 60vh;
     margin-bottom: 5rem;
 }
 
@@ -91,4 +99,5 @@ body .carousel-item {
 .carousel-wrapper {
     display: flex;
     justify-content: center;
+    margin: 2rem 0rem;
 }

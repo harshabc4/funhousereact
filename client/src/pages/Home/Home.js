@@ -51,7 +51,8 @@ export default function Home() {
                     strength={800}
                 > */}
                 <div className="info-wrapper d-flex">
-                    <div className="info text-center">Owned and operated by musicians and creatives, The Funhouse is a private recording studio and rehearsal suite in Richmond, Virginia. Whether you need a new practice space, want to cut a demo, or are looking to record your next album - we are here to help. Contact us now for rates and availability. </div>
+                    <div className="info text-center">
+                        <div>Owned and operated by musicians and creatives, The Funhouse is a private recording studio and rehearsal suite in Richmond, Virginia. </div><div>Whether you need a new practice space, want to cut a demo, or are looking to record your next album - we are here to help. Contact us now for rates and availability. </div></div>
                 </div>
                 {/* <div>and here is a test</div>
                     <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small> */}

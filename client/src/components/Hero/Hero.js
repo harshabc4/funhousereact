@@ -19,7 +19,7 @@ export default function Hero(props) {
     return (
         <div className="hero-main-wrapper">
             <div className="hero-wrapper">
-                <h1 className="slogan text-center h1">WELCOME TO THE FUNHOUSE</h1>
+                <h1 className="slogan text-center h1 p-4">WELCOME TO THE FUNHOUSE</h1>
                 {/* <div>Owned and operated by musicians and creatives, The Funhouse is a private recording studio and rehearsal space in Richmond, Virginia.  Our hybrid analog and digital recording system allows us to push the boundaries of a classic studio - and amplify the artists.</div> */}
             </div>
             <div className="studio-pics-wrapper row">

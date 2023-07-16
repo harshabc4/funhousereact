@@ -14,15 +14,14 @@ const StudioData = {
     // },
     Amps: {
         Items: [
-            "2 - 73’ Fender Bassman",
-            "2 - Peavey 6505",
+            "73’ Fender Bassman (2)",
+            "Peavey 6505 (2)",
             "Fender Hot Rod Deluxe",
             "Kustom Kasino K-252",
             "Ampeg SVT-2",
             "Sunn Concert Bass",
             "Laney",
-            "Orange",
-            "Marshall Plexi?"
+            "Orange"
         ],
         Order: 5,
     },

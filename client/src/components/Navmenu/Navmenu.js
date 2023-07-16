@@ -16,7 +16,7 @@ export default function Navmenu() {
           <ul className="navbar-nav row" id="navbarSupportedContent">
             <NavLink className="nav-link col-md-3" to="/">Home</NavLink>
             {/* <Link className="nav-link" to="/booking">Booking</Link> */}
-            <NavLink className="nav-link col-md-3" to="/creatives">Creatives</NavLink>
+            <NavLink className="nav-link col-md-3" to="/creatives">Rehearsal Suite</NavLink>
             <NavLink className="nav-link col-md-3" to="/studio">Recording Studio</NavLink>
             <NavLink className="nav-link col-md-3" to="/faq">FAQ</NavLink>
             {/* <li><a className="nav-link" href="#">Testimonials</a></li>

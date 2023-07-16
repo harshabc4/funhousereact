@@ -9,7 +9,7 @@ export default function Faq() {
         <div className="creatives faq-container">
             <div className="creatives-without-footer text-center faq">
                 <Navmenu />
-                <h1>FAQ</h1>
+                <h1 className="creatives-header">FAQ</h1>
                 <div>
                     <h2>What is included in the space rental?</h2>
                     <ul>
@@ -22,7 +22,7 @@ export default function Faq() {
                 </div>
                 <div>
                     <h2>How can I pay for my session?</h2>
-                    <p>Square, Venmo, or cash - @thefunhouserichmond</p>
+                    <p>Venmo or cash - @thefunhouserichmond</p>
                 </div>
                 <div>
                     <h2>What are your hours and how long is a session?</h2>
