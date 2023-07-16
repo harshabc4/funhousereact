@@ -16,7 +16,7 @@ export default function Studio() {
                     <h1 className="h1 creatives-header recording-header">Recording Studio</h1>
                     <div className="row">
                         {sortedCategories.map(([category, items]) => (
-                            <div key={category} className="col-lg-3">
+                            <div key={category} className="col-lg-4">
                                 <h2 className="h2 my-3">{category}</h2>
                                 <div className="studio-category">
                                     <ul className="mb-2">

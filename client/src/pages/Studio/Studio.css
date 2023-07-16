@@ -1,5 +1,5 @@
 .studio-data-wrapper {
-    max-width: 80%;
+    max-width: 90%;
     margin: auto;
     font-size: 0.75rem;
 }
@@ -8,14 +8,7 @@
     font-size: 1.5rem;
 }
 
-@media (min-width: 992px) {
-    .studio-category {
-        max-height: 20rem;
-        /* overflow: auto;
-        scrollbar-width: thin; */
-        margin: 0rem 2rem;
-    }
-}
+
 
 .studio-category {
     /* max-height: 15rem; */
@@ -32,5 +25,24 @@
 
 .studio-category h2+* {
     margin-top: 0.75rem;
-    ;
+}
+
+.studio-category li {
+    max-width: 90%;
+}
+
+
+
+@media (min-width: 992px) {
+    .studio-category {
+        max-height: 20rem;
+        /* overflow: auto;
+        scrollbar-width: thin; */
+        margin: 0rem 2rem 4rem;
+    }
+
+    ul {
+        max-width: 80%;
+        margin: auto;
+    }
 }
