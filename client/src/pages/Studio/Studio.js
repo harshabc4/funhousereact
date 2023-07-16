@@ -16,13 +16,15 @@ export default function Studio() {
                     <h1 className="h1 creatives-header recording-header">Recording Studio</h1>
                     <div className="row">
                         {sortedCategories.map(([category, items]) => (
-                            <div key={category} className="col-lg-3 studio-category">
-                                <h2 className="h2 my-2">{category}</h2>
-                                <ul className="mb-2">
-                                    {items.Items.sort().map((item, index) => (
-                                        <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
+                            <div key={category} className="col-lg-3">
+                                <h2 className="h2 my-3">{category}</h2>
+                                <div className="studio-category">
+                                    <ul className="mb-2">
+                                        {items.Items.sort().map((item, index) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         ))}
                     </div>
